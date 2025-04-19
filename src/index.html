@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro Contable</title>
+</head>
+<body>
+<input type="file" accept=".xlsx" id="excelInput" class="mb-4" />
 
-  </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-  </body>
+<div class="grid">
+  <div class="grid">
+    <select id="provider"></select>
+    <select id="branch"></select>
+  </div>
+
+  <div class="grid">
+    <input type="text" id="billNumber" placeholder="Nro Factura" />
+    <input type="date" id="expirationDate" />
+    <input type="number" id="billAmount" placeholder="Monto" step="0.01" />
+  </div>
+
+  <div class="grid">
+    <select id="debit1"></select>
+    <select id="debit2"></select>
+    <select id="credit3"></select>
+  </div>
+
+  <div class="flex">
+    <button id="addRow">Agregar a Grid</button>
+    <button id="exportExcel">Exportar a Excel</button>
+  </div>
+
+  <div id="tableContainer" class="overflow-x-auto mt-6 border p-4 rounded shadow"></div>
+</div>
+</body>
 </html>
